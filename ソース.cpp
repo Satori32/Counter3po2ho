@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 
+//not complate debug. compiler is confuse.
+
 template<class T>
 struct Counter3po2ho {
 	T Now = 0;
