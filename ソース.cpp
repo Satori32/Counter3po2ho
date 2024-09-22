@@ -25,7 +25,7 @@ bool ConstructCounter3po2ho(Counter3po2ho<T>& In, const T& F, const T& B, const 
 template<class T>
 T Do(Counter3po2ho<T>& In) {
 	In.Bu = In.One * In.Op;
-	In.BB += In.BB;
+	In.BB += In.Bu;
 	In.Now += In.Bu;
 	if(In.Bu>=0){
 		if (In.BB >= In.F) {
