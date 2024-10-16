@@ -4,7 +4,7 @@
 //not complate debug. compiler is confuse.
 
 template<class T>
-struct Counter3po2ho {
+struct CounterHanpuku {
 	T Now = 0;
 	T F = 3;
 	T B = 2;
@@ -15,7 +15,7 @@ struct Counter3po2ho {
 };
 
 template<class T>
-bool ConstructCounter3po2ho(Counter3po2ho<T>& In, const T& F, const T& B, const T& One) {
+CounterHanpuku<T> ConstructCounter3po2ho(const T& F, const T& B, const T& One) {
 	In.F = F;
 	In.B = B;
 	In.One = One;
@@ -23,7 +23,7 @@ bool ConstructCounter3po2ho(Counter3po2ho<T>& In, const T& F, const T& B, const 
 }
 
 template<class T>
-T Do(Counter3po2ho<T>& In) {
+T Do(CounterHanpuku<T>& In) {
 	In.Bu = In.One * In.Op;
 	In.BB += In.Bu;
 	In.Now += In.Bu;
@@ -41,12 +41,12 @@ T Do(Counter3po2ho<T>& In) {
 }
 
 template<class T>
-T Now(Counter3po2ho<T>& In) {
+T Now(CounterHanpuku<T>& In) {
 	return In.Now;
 }
 
 int main() {
-	Counter3po2ho<std::intmax_t> C32;
+	Counter3po2ho<intmax_t> C32;
 	
 	ConstructCounter3po2ho(C32, 3, 2, 1);
 }
