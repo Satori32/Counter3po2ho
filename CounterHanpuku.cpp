@@ -1,18 +1,5 @@
-#include <iostream>
-#include <cstdlib>
+#include C"CounterHanpuku.h"
 
-//not complate debug. compiler is confuse.
-
-template<class T>
-struct CounterHanpuku {
-	T Now = 0;
-	T F = 3;
-	T B = 2;
-	T One = 1;
-	int Op = 1;
-	T Bu = 0;
-	T BB = 0;
-};
 
 template<class T>
 CounterHanpuku<T> ConstructCounterHanpuku(const T& F, const T& B, const T& One) {
@@ -27,7 +14,7 @@ T Do(CounterHanpuku<T>& In) {
 	In.Bu = In.One * In.Op;
 	In.BB += In.Bu;
 	In.Now += In.Bu;
-	if(In.Bu>=0){
+	if (In.Bu >= 0) {
 		if (In.BB >= In.F) {
 			In.Op *= -1;
 		}
@@ -43,10 +30,4 @@ T Do(CounterHanpuku<T>& In) {
 template<class T>
 T Now(CounterHanpuku<T>& In) {
 	return In.Now;
-}
-
-int main() {
-	Counter3po2ho<intmax_t> C32;
-	
-	ConstructCounter3po2ho(C32, 3, 2, 1);
 }
